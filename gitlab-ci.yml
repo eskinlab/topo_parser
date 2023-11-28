@@ -1,0 +1,23 @@
+image: python:3.12
+
+variables:
+  FILE_PATH: "$FILE_PATH"
+  PRINT_USAGE: "$PRINT_USAGE"
+  PRINT_PARSED: "$PRINT_PARSED"
+  SCRIPT_NAME: "$SCRIPT_NAME"
+
+stages:
+  - run
+
+job:
+  before_script:
+    - pip install --upgrade pip
+    - pip install -r requirements.txt
+  stage: run
+  script:
+    - echo "-f=$FILE_PATH -u=$PRINT_USAGE -p=$PRINT_PARSED"
+    - python $SCRIPT_NAME -f=$FILE_PATH -u=$PRINT_USAGE -p=$PRINT_PARSED
+  artifacts:
+    paths:
+      - public
+
