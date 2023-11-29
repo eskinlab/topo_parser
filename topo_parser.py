@@ -50,8 +50,8 @@ class Device:
 
     def __get_connections(self, data: list) -> list:
         """
-        Get all device connections from the data chunk and insert as Connections object to the field self.connections
-        :param device_chunk_data: Information lines about the device from the topology file
+        Get all device connections from the data block
+        :param data: Information lines about the device from the topology file
         :return: connections
         """
         connections = []
@@ -208,10 +208,10 @@ def main():
         topo.dump_pkl_to_file(topo, store_file)
         return topo
 
-    def print_parsed_topology(store_file, tp):
-        if not tp:
-            tp = Topology.load_pkl_from_file(store_file)
-        multiprocessing.Process(target=tp.run_print_parsed_topology).start()
+    def print_parsed_topology(store_file, topo):
+        if not topo:
+            topo = Topology.load_pkl_from_file(store_file)
+        multiprocessing.Process(target=topo.run_print_parsed_topology).start()
 
     parser = get_args_parser()
     input_args = None
