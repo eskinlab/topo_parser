@@ -1,0 +1,79 @@
+# Topology map generated at 2023-11-29 23:47:28.573909
+# Source file: small_topo_file
+
+Switch S-b8599f0300fc6de4
+devid=0xd2f0 sysimgguid=0xb8599f0300fc6de4 caguid=0xb8599f0300fc6de4(b8599f0300fc6de4)
+ Port [3] connected to S-0002c903007b78b0 port [1]
+ Port [23] connected to H-ec0d9a03007d7d0a port [1]
+ Port [24] connected to H-ec0d9a03007d7d0b port [1]
+ Port [41] connected to H-b8599f0300fc6dec port [1]
+
+Switch S-0002c903007b78b0
+devid=0xc738 sysimgguid=0x2c903007b78b0 caguid=0x2c903007b78b0(2c903007b78b0)
+ Port [1] connected to S-b8599f0300fc6de4 port [3]
+ Port [3] connected to H-e41d2d03005cf34c port [1]
+ Port [5] connected to H-e41d2d03005cf34d port [1]
+ Port [8] connected to H-0c42a103008b40d0 port [1]
+ Port [9] connected to H-0c42a103008b40d1 port [1]
+ Port [19] connected to H-b8599f03000a77d0 port [1]
+ Port [20] connected to H-b8599f03000a77d1 port [1]
+ Port [25] connected to S-0002c903007b78b0 port [26]
+ Port [26] connected to S-0002c903007b78b0 port [25]
+ Port [28] connected to S-0002c903007b78b0 port [29]
+ Port [29] connected to S-0002c903007b78b0 port [28]
+ Port [30] connected to H-248a0703002e61db port [1]
+ Port [31] connected to H-248a0703002e61da port [1]
+ Port [33] connected to H-0c42a103008b3bd0 port [1]
+ Port [34] connected to H-0c42a103008b3bd1 port [1]
+
+Host H-ec0d9a03007d7d0b
+devid=0x1017 sysimgguid=0xec0d9a03007d7d0a caguid=0xec0d9a03007d7d0b
+ Port [1] connected to S-b8599f0300fc6de4 port [24]
+
+Host H-b8599f0300fc6dec
+devid=0xcf09 sysimgguid=0xb8599f0300fc6de4 caguid=0xb8599f0300fc6dec
+ Port [1] connected to S-b8599f0300fc6de4 port [41]
+
+Host H-ec0d9a03007d7d0a
+devid=0x1017 sysimgguid=0xec0d9a03007d7d0a caguid=0xec0d9a03007d7d0a
+ Port [1] connected to S-b8599f0300fc6de4 port [23]
+
+Host H-0c42a103008b3bd1
+devid=0x101b sysimgguid=0xc42a103008b3bd0 caguid=0xc42a103008b3bd1
+ Port [1] connected to S-0002c903007b78b0 port [34]
+
+Host H-0c42a103008b3bd0
+devid=0x101b sysimgguid=0xc42a103008b3bd0 caguid=0xc42a103008b3bd0
+ Port [1] connected to S-0002c903007b78b0 port [33]
+
+Host H-248a0703002e61da
+devid=0x1013 sysimgguid=0x248a0703002e61da caguid=0x248a0703002e61da
+ Port [1] connected to S-0002c903007b78b0 port [31]
+
+Host H-248a0703002e61db
+devid=0x1013 sysimgguid=0x248a0703002e61da caguid=0x248a0703002e61db
+ Port [1] connected to S-0002c903007b78b0 port [30]
+
+Host H-b8599f03000a77d1
+devid=0x1017 sysimgguid=0xb8599f03000a77d0 caguid=0xb8599f03000a77d1
+ Port [1] connected to S-0002c903007b78b0 port [20]
+
+Host H-b8599f03000a77d0
+devid=0x1017 sysimgguid=0xb8599f03000a77d0 caguid=0xb8599f03000a77d0
+ Port [1] connected to S-0002c903007b78b0 port [19]
+
+Host H-0c42a103008b40d1
+devid=0x101b sysimgguid=0xc42a103008b40d0 caguid=0xc42a103008b40d1
+ Port [1] connected to S-0002c903007b78b0 port [9]
+
+Host H-e41d2d03005cf34d
+devid=0x1013 sysimgguid=0xe41d2d03005cf34c caguid=0xe41d2d03005cf34d
+ Port [1] connected to S-0002c903007b78b0 port [5]
+
+Host H-e41d2d03005cf34c
+devid=0x1013 sysimgguid=0xe41d2d03005cf34c caguid=0xe41d2d03005cf34c
+ Port [1] connected to S-0002c903007b78b0 port [3]
+
+Host H-0c42a103008b40d0
+devid=0x101b sysimgguid=0xc42a103008b40d0 caguid=0xc42a103008b40d0
+ Port [1] connected to S-0002c903007b78b0 port [8]

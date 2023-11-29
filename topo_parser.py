@@ -9,34 +9,6 @@ STORE_FILE = "store.pkl"
 OUTPUT_FILE = "output.txt"
 
 
-class Connection:
-
-    def __init__(self, line: str):
-        self.port_local, \
-        self.dev_remote, \
-        self.port_remote \
-            = self.__get_connection_params(line)
-
-    def __get_connection_params(self, line: str) -> object:
-        """
-
-        :param line: 
-        :return: 
-        """
-        match = re.search(Connection.search_pattern(), line)
-        if match:
-            return match.group(1), match.group(3), match.group(4)
-        else:
-            raise ValueError(f"No match found in string:\n{line}")
-
-    @classmethod
-    def search_pattern(cls) -> str:
-        return r'(\[\d+\])(\([\w]+\))?\s+"(.*?)"(\[\d+\])(\([\w]+\))?'
-
-    def __str__(self):
-        return f" Port {self.port_local} connected to {self.dev_remote} port {self.port_remote}\n"
-
-
 class Device:
 
     def __init__(self, dev_data, dev_type=None):
@@ -83,6 +55,34 @@ class Switch(Device):
     @staticmethod
     def is_switch(line):
         return line.startswith("Switch")
+
+
+class Connection:
+
+    def __init__(self, line: str):
+        self.port_local, \
+        self.dev_remote, \
+        self.port_remote \
+            = self.__get_connection_params(line)
+
+    def __get_connection_params(self, line: str) -> object:
+        """
+
+        :param line:
+        :return:
+        """
+        match = re.search(Connection.search_pattern(), line)
+        if match:
+            return match.group(1), match.group(3), match.group(4)
+        else:
+            raise ValueError(f"No match found in string:\n{line}")
+
+    @classmethod
+    def search_pattern(cls) -> str:
+        return r'(\[\d+\])(\([\w]+\))?\s+"(.*?)"(\[\d+\])(\([\w]+\))?'
+
+    def __str__(self):
+        return f" Port {self.port_local} connected to {self.dev_remote} port {self.port_remote}\n"
 
 
 class Topology:
