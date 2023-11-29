@@ -1,43 +1,36 @@
-Attached is an example of Infiniband network topology discovery tool output file.
+## Topo Parser
+Topo Parser is a Python program for parsing and printing network topology. 
 
-You should write a program in Python, or any other programming language of your choice - topo_parser, that parses this file, finds, and prints all connections in the network. The utility should be run as following:
-topo_parser –h
-print usage and exit
-topo_parser –f topofile.topo
-parse topofile.topo
-topo_parser –p
-print parsed topology
-Infiniband network can be quite large (hundreds of thousands of network devices), as a result, the topology file can be large as well. Reading and parsing such file can take a while. Please propose an improved topo_parser version that allows the user to print existing topology while topo_parser is processing new topofile. Parsing progress should be reported to the user.
-Infiniband network topology file explanation:
+## Usage
+```bash
+python topo_parser.py <options>
+```
+## Input options
 
-There are two types of devices – Switch and host.
+```bash
+–h Print usage information
 
-Print the devices in order of connectivity:
+–f <topofile> Parse a topology file
 
-For example:
+–p Print the parsed topology after the program is running
 
-Hosts
+–e exit the program
 
-Switches
+```
 
-Switches
+## Usage Examle
+```bash
+python topo_parser.py -h  # Print usage and exit
+````
 
-Hosts
-
- 
-
-Host:
-
-sysimgguid=0xe41d2d03005cf34c
-
-Port_id:= e41d2d03005cf34c
-
-Connected to switch: switchguid=0x2c903007b78b0(2c903007b78b0), port=3
-
- 
-
-Pay attention that:
-
--          there can be more than one connection between devices.
-
--          There can be more than one port on host.
+```bash
+python topo_parser.py -f topofile.topo  # Parse topofile.topo
+```
+```bash
+python topo_parser.py -f topofile.topo -p  # Parse and print topology
+```
+##Installation
+To use Topo Parser, follow these steps:
+```bash
+pip install -r requirements.txt
+```
